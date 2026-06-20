@@ -187,6 +187,7 @@ dissolving into smoke above a grounded, full-color Julie.
 ![Storybook cover](storybook/art/cover.png)
 
 📖 **Read it: [`storybook/story.html`](storybook/story.html)** *(regenerate with `storybook/build_html.py`)*
+🖨️ **Print/PDF export: [`build/storybook.pdf`](build/storybook.pdf)** — one beat per page, rendered from the HTML.
 
 ---
 
