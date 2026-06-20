@@ -1,0 +1,6 @@
+.DS_Store
+# raw source episode video — large + not ours to redistribute
+*.mkv
+*.mp4.tmp
+# third-party copyrighted source subtitles (Netflix rips)
+*.srt
