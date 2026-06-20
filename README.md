@@ -44,6 +44,7 @@ the project's centerpiece song, **"Don't Let Go."**
 - `CLAUDE.md` — story bible (characters, magic rules, season arc, cliffhanger).
 - `PLAN.md` — project plan, decisions, model IDs, and pipeline notes.
 - `SHOTLIST.md` — the trailer shot list (20 shots + 5 text cards).
+- `screenplay/The_Crossing.fountain` — the full episode screenplay (Fountain format).
 - `extract_char.sh` — reference-frame extractor (ffmpeg).
 - `refs/storybook/` — photorealistic character portraits (+ contact sheet).
 - `refs/frames/` — per-shot first-frame stills (+ storyboard; `*_orig.png` = pre-recompose).

@@ -55,6 +55,7 @@ Luke–Julie romance unresolved; Alex–Willie unresolved (Willie still bound to
 
 Next actions (in order)
 
+0. DONE: Full episode screenplay written -> screenplay/The_Crossing.fountain (Fountain format). Resolves all open threads: unfinished business = the line Rose->Julie->boys (Rose was a 1995 Sunset Curve fan, their demo made her write the songs Julie plays); crossing-over light burns off the stamp but they STAY because their business was to be seen/loved/belong, not to leave (the touch = proof); Caleb routed (power broken when stamp breaks), Nick freed, Willie freed, Carrie starts redemption (learns of dad's theft), Luke/Julie + Alex/Willie land. Caleb seeded for S2.
 1. Finish the character portrait batch (10 of 13 left; fix Reggie source -> reggie_headshot.png). These anchor Veo consistency.
 2. Write a trailer-scoped beat outline (~15-25 shots) covering the Option D arc: curse ticking -> Caleb-in-Nick threat -> sacrifice setup -> farewell performance -> the touch/hug reversal. (Full ~30-page script is optional now; the trailer only needs the beat spine + a few key lines.)
 3. Turn the outline into a shot list: per shot -> Veo prompt, character ref(s), first-frame still, duration.
