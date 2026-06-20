@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Julie and the Phantoms — The Crossing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Anton&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#070612; --void2:#0d0a22; --violet:#7c4dff; --violet-soft:#b69dff;
+  --magenta:#d65ad0; --ink:#ece9ff; --muted:#9c93c8; --line:rgba(124,77,255,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--void); color:var(--ink);
+  font-family:'Spectral',Georgia,serif; line-height:1.75; font-size:19px;
+  background-image:
+    radial-gradient(1200px 700px at 50% -10%, rgba(124,77,255,.18), transparent 60%),
+    radial-gradient(900px 600px at 90% 30%, rgba(214,90,208,.10), transparent 55%),
+    radial-gradient(900px 600px at 5% 70%, rgba(124,77,255,.10), transparent 55%);
+  background-attachment:fixed;
+}
+img{display:block;max-width:100%}
+
+/* ---------- cover ---------- */
+.cover{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+.cover .bg{position:absolute;inset:0;background:url("art/cover.png") center/cover no-repeat;
+  filter:saturate(1.05) brightness(.8) hue-rotate(-6deg)}
+.cover .scrim{position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(7,6,18,.45) 0%, rgba(7,6,18,.15) 35%, rgba(7,6,18,.85) 100%)}
+.cover .lockup{position:relative;z-index:2;padding:6vh 5vw}
+.tagline{font-family:'Permanent Marker',cursive;color:var(--violet-soft);
+  letter-spacing:.04em;font-size:clamp(15px,2.4vw,24px);margin:0 0 4vh;text-shadow:0 2px 18px rgba(124,77,255,.6)}
+.t-julie{font-family:'Permanent Marker',cursive;color:#fff;line-height:.9;
+  font-size:clamp(46px,9vw,118px);text-shadow:0 4px 30px rgba(124,77,255,.7),0 0 60px rgba(214,90,208,.35)}
+.t-phantoms{font-family:'Anton',sans-serif;letter-spacing:.16em;color:#fff;
+  font-size:clamp(34px,7vw,86px);margin:.1em 0 0;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.t-cross{font-family:'Permanent Marker',cursive;color:var(--magenta);
+  font-size:clamp(30px,6vw,76px);margin:.25em 0 0;text-shadow:0 0 36px rgba(214,90,208,.6)}
+.scroll{position:absolute;bottom:26px;left:0;right:0;z-index:2;color:var(--muted);
+  font-family:'Anton',sans-serif;letter-spacing:.3em;font-size:13px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+/* ---------- story flow ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:2vh 24px 10vh}
+.act{text-align:center;margin:13vh 0 9vh}
+.act span{font-family:'Permanent Marker',cursive;color:var(--magenta);
+  font-size:clamp(22px,3.6vw,38px);position:relative;padding:0 28px}
+.act span::before,.act span::after{content:"";position:absolute;top:50%;width:18vw;max-width:230px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.act span::before{right:100%} .act span::after{left:100%}
+
+.beat{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;
+  margin:9vh 0;opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.beat.in{opacity:1;transform:none}
+.beat.flip .art{order:2}
+.art{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 26px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.03), 0 0 60px rgba(124,77,255,.12)}
+.art img{width:100%;filter:saturate(1.06) contrast(1.02)}
+.art::after{content:"";position:absolute;inset:0;mix-blend-mode:soft-light;pointer-events:none;
+  background:linear-gradient(150deg, rgba(124,77,255,.45), rgba(214,90,208,.25) 55%, rgba(7,6,18,.5))}
+.copy p{margin:0 0 1.1em;color:#dfdbf5}
+.copy .lead{font-size:1.06em}
+.copy .lead::first-letter{font-family:'Anton',sans-serif;float:left;line-height:.8;
+  font-size:3.1em;padding:6px 12px 0 0;color:var(--magenta)}
+
+footer{text-align:center;padding:8vh 24px 12vh;color:var(--muted);border-top:1px solid var(--line);margin-top:6vh}
+footer .end{font-family:'Permanent Marker',cursive;color:var(--violet-soft);font-size:clamp(20px,3vw,30px);margin-bottom:1.2em}
+footer small{display:block;max-width:640px;margin:0 auto;font-size:13px;line-height:1.6;opacity:.8}
+
+@media(max-width:760px){
+  .beat,.beat.flip{grid-template-columns:1fr;gap:22px}
+  .beat.flip .art{order:0}
+  body{font-size:18px}
+}
+</style></head>
+<body>
+
+<header class="cover">
+  <div class="bg"></div><div class="scrim"></div>
+  <div class="lockup">
+    <p class="tagline">You only live once, but you can rock forever</p>
+    <div class="t-julie">Julie and the</div>
+    <div class="t-phantoms">PHANTOMS</div>
+    <div class="t-cross">The Crossing</div>
+  </div>
+  <div class="scroll">SCROLL</div>
+</header>
+
+<main class="wrap">
+<div class="act"><span>Prologue</span></div>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p02int.png" alt=""></figure>
+  <div class="copy"><p class="lead">Twenty-five years ago, four boys in a band called Sunset Curve were one night away from their big break. They never made the show. Three of them — Luke, Reggie, and Alex — became ghosts, drifting unseen through a world that had moved on. Until a grieving girl named Julie sat down at her mother&#x27;s piano, played their song, and made them real again.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p03.png" alt=""></figure>
+  <div class="copy"><p class="lead">The night they played the Orpheum, something impossible happened in the little garage studio behind the Molina house.</p>
+<p>Julie threw her arms around Luke — a boy who had been a ghost for twenty-five years — and this time, her arms did not pass through him. He was solid. Warm. Real.</p>
+<p>&quot;I&#x27;m touching you,&quot; she whispered, half laughing, half afraid to breathe. Reggie and Alex hovered close, not daring to move, as if the smallest sound might break the spell.</p>
+<p>For one perfect moment the band was whole, and the whole world was just four kids and a song that finally felt finished.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p04.png" alt=""></figure>
+  <div class="copy"><p class="lead">But the spell broke — and not gently.</p>
+<p>Luke gasped and doubled over. Beneath the skin of his wrist, where Caleb had marked him, a jagged blue light stuttered and burned. The garage lights blew out in a shower of sparks, and Reggie and Alex seized too, clutching their wrists.</p>
+<p>The stamp was no longer a warning. It was a clock, counting down.</p>
+<p>And far across town, on a dark and quiet street, a smiling man stepped out of the shadows behind Julie&#x27;s friend Nick — and the fight for the band began.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p05.png" alt=""></figure>
+  <div class="copy"><p class="lead">Caleb Covington found Nick alone. &quot;How sweet,&quot; the ghost showman purred. &quot;The broken-hearted boy.&quot; His mark flared — and poured into Nick like ink into water. When Nick smiled again, it was not Nick smiling. &quot;I have a fight too.&quot;</p></div>
+</section>
+<div class="act"><span>Act One · The Clock</span></div>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p06.png" alt=""></figure>
+  <div class="copy"><p class="lead">Morning came as if nothing were wrong. Ray Molina burned the eggs. Carlos waved his homemade ghost-detector at the garage and swore the readings were off the charts. (&quot;Probably the eggs,&quot; said Julie.)</p>
+<p>But she had her mother&#x27;s faraway look — the one Rose used to get when a song wasn&#x27;t finished yet. And Julie was running out of time to finish this one.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p07.png" alt=""></figure>
+  <div class="copy"><p class="lead">At the skate park, Willie brought terrible news. The stamp was no longer a warning. By sundown it would finish them — not the gentle kind of gone, but gone forever, not anywhere at all. There was only one way out: to finish their true unfinished business and cross over into the light. &quot;But the Orpheum was our business,&quot; Alex said. Willie shook his head. &quot;Then it was never the Orpheum.&quot;</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p08.png" alt=""></figure>
+  <div class="copy"><p class="lead">Back in the garage, Flynn ran the war room. Reggie was certain their unfinished business was the backflip he&#x27;d never learned to do. But Luke knew it was bigger.</p>
+<p>For twenty-five years they had chased the stage, the lights, the dream of being seen — and they had gotten all of it. The only thing that had truly changed was Julie.</p>
+<p>&quot;It&#x27;s not the dream,&quot; Flynn said, writing it down. &quot;It&#x27;s the connection.&quot;</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p09.png" alt=""></figure>
+  <div class="copy"><p class="lead">Julie&#x27;s eyes drifted to a box on the shelf, marked with her mother&#x27;s name. Rose had kept everything — photographs, set lists, a dried dahlia.</p>
+<p>And then Julie&#x27;s hand stopped on something that made all three boys go very, very quiet.</p></div>
+</section>
+<div class="act"><span>Act Two · The Line</span></div>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p10.png" alt=""></figure>
+  <div class="copy"><p class="lead">A faded cassette, hand-lettered: SUNSET CURVE. Clipped to it, a child-sized band T-shirt — one of only a dozen ever made.</p>
+<p>On the back, in Rose&#x27;s young handwriting: &quot;To the boys I&#x27;ll probably never meet — your music made me brave enough to write my own. Whatever happens, don&#x27;t let it go. — R.&quot;</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p11.png" alt=""></figure>
+  <div class="copy"><p class="lead">There it was. Their music had reached exactly one person in 1995 — a girl named Rose, who began writing songs because of them. The same songs Julie now played. The same songs that had pulled them back from the dark.</p>
+<p>Their unfinished business was never a stage. It was a line drawn through twenty-five years — their music, to Rose, to Julie, to this. They had finished it the moment she sang. They just never knew.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p12.png" alt=""></figure>
+  <div class="copy"><p class="lead">But finishing it meant crossing over — and crossing over meant leaving.</p>
+<p>Meanwhile, the thing wearing Nick&#x27;s face paid a visit to a mansion full of stolen songs: to Trevor Wilson, the bandmate who had lived, and lied, and grown famous on music that was never his. His daughter Carrie watched her father&#x27;s smile crack, and began, for the first time, to wonder what songs.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p13.png" alt=""></figure>
+  <div class="copy"><p class="lead">On the back step, as the day burned down toward sundown, Luke took Julie&#x27;s hand — solid, warm, and running out. &quot;The whole time we chased the Orpheum,&quot; he said, &quot;I just wanted to be heard by you.&quot;</p>
+<p>&quot;Then don&#x27;t go,&quot; Julie whispered. But there was no door that let him stay — only the light that would set him free, and take him away.</p></div>
+</section>
+<div class="act"><span>Act Three · The Choice</span></div>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p14.png" alt=""></figure>
+  <div class="copy"><p class="lead">In the gold and shadow of the Hollywood Ghost Club, Caleb waited, certain the boys would crawl to him and sign their souls away rather than face the nothing. Willie stood before him. &quot;And if they cross over instead?&quot; he asked. Caleb&#x27;s smile thinned. For the first time, Willie did not look away.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p15.png" alt=""></figure>
+  <div class="copy"><p class="lead">As the light went amber and final, the band gathered for one last huddle. &quot;Being dead with you guys,&quot; Reggie said, his voice cracking, &quot;was better than being alive with anybody else.&quot;</p>
+<p>Julie laid her living hand over three ghostly ones — and for that moment, they were all solid together. &quot;Sunset Curve,&quot; said Luke. &quot;Julie and the Phantoms,&quot; said Julie.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p16.png" alt=""></figure>
+  <div class="copy"><p class="lead">The garage door rolled up on a crowd Flynn had gathered in the driveway. Julie sat at the piano and looked back at her boys. &quot;This one&#x27;s called Don&#x27;t Let Go,&quot; she told them all. &quot;It&#x27;s the last one we&#x27;ll ever play.&quot;</p>
+<p>&quot;Make it loud.&quot;</p></div>
+</section>
+<div class="act"><span>Act Four · The Crossing</span></div>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p17.png" alt=""></figure>
+  <div class="copy"><p class="lead">She played her mother&#x27;s line, and the boys shimmered into view — solid to every eye in the driveway. Phones rose. People gasped. But Julie saw only them: glowing, alive, hers, as the first verse lifted into the night.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p18.png" alt=""></figure>
+  <div class="copy"><p class="lead">Luke crossed to her microphone and the duet bloomed between them — every word they had never said, every road they would never get to take.</p>
+<p>&quot;So don&#x27;t let go,&quot; they sang together, &quot;if this is goodbye then let it show.&quot; The band slammed in beneath them, and the whole driveway came alive.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p19.png" alt=""></figure>
+  <div class="copy"><p class="lead">Reggie and Alex traded the bridge of their lives — loud and true and unafraid.</p>
+<p>&quot;We were more than the worst thing we ever went through,&quot; they sang. &quot;If the light comes to take us, we&#x27;ll go without fear — &#x27;cause the best of us is staying right here.&quot;</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p20.png" alt=""></figure>
+  <div class="copy"><p class="lead">And then it began: a warm white light, blooming at the edges of the three boys. The crossing-over light — real, this time. Final. They kept playing, straight into it, choosing it.</p>
+<p>And Caleb&#x27;s smug smile finally faltered. &quot;No,&quot; he breathed. &quot;They&#x27;re not supposed to want it.&quot;</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p21.png" alt=""></figure>
+  <div class="copy"><p class="lead">Julie&#x27;s voice broke on the bridge. She rose, crossed the stage, and threw her arms into the blinding light around Luke — and her arms closed around something solid.</p>
+<p>The light surged — and instead of taking them up and away, it sank into them. The stamp on Luke&#x27;s wrist burned gold, then white, then gone. They were still here.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p22.png" alt=""></figure>
+  <div class="copy"><p class="lead">&quot;Your unfinished business was never to leave,&quot; Julie said, laughing through tears. &quot;It was to be seen. To be loved. To belong.&quot; They had finished it — and it had kept them here.</p>
+<p>As Caleb&#x27;s hold shattered, the backlash tore through him, and Nick gasped free of his grip at last.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p23.png" alt=""></figure>
+  <div class="copy"><p class="lead">Caleb&#x27;s power had always been built on fear — and these were boys who had chosen love over fear, and won. His golden form guttered like a candle. &quot;This isn&#x27;t finished,&quot; he hissed from the shadows. &quot;There are other stages. Other songs. I&#x27;ll be seeing you.&quot; And then he was gone.</p></div>
+</section>
+<div class="act"><span>Tag · Don&#x27;t Let Go</span></div>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p24.png" alt=""></figure>
+  <div class="copy"><p class="lead">Later, in the quiet afterglow, Reggie demanded to be hugged and promptly burst into happy tears. Then the door creaked: Carlos, in his pajamas, ghost-detector screaming, staring straight at three glowing boys. They vanished in an instant. &quot;Probably the eggs,&quot; Julie said. Carlos was not convinced.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p25.png" alt=""></figure>
+  <div class="copy"><p class="lead">Carrie walked Nick home through the enormous night. He kept losing time, he said; the last thing he remembered was a man who said he had a fight.</p>
+<p>&quot;A lot of people around here,&quot; Carrie said quietly, thinking of a guitar under glass, &quot;have been fighting things they never told anybody about. I&#x27;m going to go ask my dad some questions.&quot;</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p26.png" alt=""></figure>
+  <div class="copy"><p class="lead">On the garage step, Willie waited — free now, the stamp gone from him too. &quot;You didn&#x27;t cease to exist,&quot; he said. &quot;Cool, right?&quot; Alex grinned. Willie held out his hand, and Alex took it — both of them solid, a small private miracle of their own — and they sat shoulder to shoulder under the stars.</p></div>
+</section>
+<section class="beat flip">
+  <figure class="art"><img loading="lazy" src="art/p27.png" alt=""></figure>
+  <div class="copy"><p class="lead">Inside, Luke took Julie&#x27;s hand. &quot;So,&quot; he said. &quot;We&#x27;re staying.&quot; &quot;You&#x27;re staying,&quot; she answered. The quiet last notes of their song hummed in the air. &quot;Don&#x27;t let go,&quot; Luke said softly. &quot;Wasn&#x27;t planning on it,&quot; said Julie, and rested her head on his shoulder — solid, warm, here.</p></div>
+</section>
+<section class="beat">
+  <figure class="art"><img loading="lazy" src="art/p28.png" alt=""></figure>
+  <div class="copy"><p class="lead">Somewhere out past the city, a chandelier flickered cold and patient — a promise for another night.</p>
+<p>But not tonight. Tonight, the band was whole.</p></div>
+</section>
+</main>
+
+<footer>
+  <div class="end">Tonight, the band is whole.</div>
+  <small>An unofficial, non-commercial fan continuation of <em>Julie and the Phantoms</em>.
+  Story &amp; art generated for personal use. Julie and the Phantoms and its characters are &copy; their respective owners.</small>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.beat').forEach(b=>io.observe(b));
+</script>
+</body></html>
