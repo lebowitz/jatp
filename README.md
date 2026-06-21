@@ -121,7 +121,14 @@ loudness envelope of "Don't Let Go" to locate its quiet introduction, chorus ons
 fade-out, then constructing a three-segment edit such that the chorus onset coincides with the
 Act-4 stage reveal (verified against the assembled timeline).
 
-🎬 **Trailer:** [`build/trailer_v1.mp4`](build/trailer_v1.mp4) — ~2:02, 1280×720.
+Two cuts are provided. The initial cut (`trailer_v1.mp4`) uses near-uniform shot lengths; a
+revised cut (`trailer_v2.mp4`) applies conventional trailer pacing — an accelerating cut
+rhythm (long establishing holds → a pre-climax montage burst → a sustained hold on the climax
+and reversal), per-shot in-point selection so each clip's payoff moment falls within its
+window, and a re-synced score.
+
+🎬 **Trailer (recommended):** [`build/trailer_v2.mp4`](build/trailer_v2.mp4) — ~1:08, 1280×720.
+🎬 **Trailer (initial cut):** [`build/trailer_v1.mp4`](build/trailer_v1.mp4) — ~2:02, 1280×720.
 
 ### 2.6 Storybook
 
@@ -211,9 +218,9 @@ ImageMagick · Python.
 
 ## 5. Limitations and future work
 
-- The trailer uses fast-tier video synthesis and start-trimmed clips; planned refinements
-  include per-clip in/out selection, smoother audio splicing, an underscore for the middle acts,
-  and re-rendering hero shots at a higher-quality tier.
+- Trailer pacing and per-clip in-point selection are addressed in `trailer_v2.mp4`; remaining
+  refinements include re-rendering hero shots at a higher-quality video tier, smoother audio
+  splicing, and an underscore bed for the middle acts.
 - Only one source episode was available as video, constraining secondary-character references.
 - Character consistency across independently generated images is approximate, not guaranteed.
 - The continuation deliberately leaves the antagonist available for a subsequent season.
