@@ -29,10 +29,10 @@ beats=[d for d in data if d["layout"]!="cover"]
 p=nextpage(); bg("/tmp/_cbg.png")
 artimg(os.path.join(HERE,"art",cover["art"]),"/tmp/_cart.png",h=1230)
 sh("magick","/tmp/_cbg.png","/tmp/_cart.png","-gravity","west","-geometry","+150+0","-composite",
-   "-gravity","east","-font","SignPainter-HouseScript","-fill",TXT,"-pointsize","34","-annotate","+150+330","You only live once, but you can rock forever",
-   "-gravity","east","-font","SignPainter-HouseScriptSemibold","-fill","#f6f2ff","-pointsize","120","-annotate","+150+150","Julie and the",
-   "-gravity","east","-font","Helvetica-Bold","-fill","#ffffff","-pointsize","78","-annotate","+170+30","P H A N T O M S",
-   "-gravity","east","-font","SignPainter-HouseScript","-fill",MAG,"-pointsize","104","-annotate","+150-140","The Crossing",
+   "-gravity","east","-font","SignPainter-HouseScript","-fill",TXT,"-pointsize","34","-annotate","+150-320","You only live once, but you can rock forever",
+   "-gravity","east","-font","SignPainter-HouseScriptSemibold","-fill","#f6f2ff","-pointsize","120","-annotate","+150-170","Julie and the",
+   "-gravity","east","-font","Helvetica-Bold","-fill","#ffffff","-pointsize","78","-annotate","+170-10","P H A N T O M S",
+   "-gravity","east","-font","SignPainter-HouseScript","-fill",MAG,"-pointsize","104","-annotate","+150+160","The Crossing",
    p)
 
 n=0
