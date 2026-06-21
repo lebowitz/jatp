@@ -8,3 +8,5 @@
 # episode intermediates (regenerable via episode/pipeline.py)
 episode/stills/
 episode/clips/
+__pycache__/
+*.pyc
