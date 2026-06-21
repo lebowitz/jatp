@@ -4,3 +4,7 @@
 *.mp4.tmp
 # third-party copyrighted source subtitles (Netflix rips)
 *.srt
+
+# episode intermediates (regenerable via episode/pipeline.py)
+episode/stills/
+episode/clips/

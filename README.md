@@ -224,6 +224,8 @@ illustrations while preserving visual cohesion.
 - `storybook/` — illustration set, prose data, and document builders
 - [`STYLE_GUIDE.md`](STYLE_GUIDE.md) — derived visual style guide
 - [`extract_char.sh`](extract_char.sh) — reference-frame extractor
+- `episode/` — scene-by-scene **episode** render pipeline (`pipeline.py`, `shots.py`) and
+  rendered scenes; in progress (Teaser scenes complete)
 - `Don't Let Go.mp3` — score
 
 ### Pipeline overview
