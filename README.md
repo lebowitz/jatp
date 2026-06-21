@@ -121,14 +121,38 @@ loudness envelope of "Don't Let Go" to locate its quiet introduction, chorus ons
 fade-out, then constructing a three-segment edit such that the chorus onset coincides with the
 Act-4 stage reveal (verified against the assembled timeline).
 
-Two cuts are provided. The initial cut (`trailer_v1.mp4`) uses near-uniform shot lengths; a
-revised cut (`trailer_v2.mp4`) applies conventional trailer pacing — an accelerating cut
-rhythm (long establishing holds → a pre-climax montage burst → a sustained hold on the climax
-and reversal), per-shot in-point selection so each clip's payoff moment falls within its
-window, and a re-synced score.
+The cut was developed across four iterations:
 
-🎬 **Trailer (recommended):** [`build/trailer_v2.mp4`](build/trailer_v2.mp4) — ~1:08, 1280×720.
-🎬 **Trailer (initial cut):** [`build/trailer_v1.mp4`](build/trailer_v1.mp4) — ~2:02, 1280×720.
+1. **`trailer_v1.mp4`** — initial assembly with near-uniform shot lengths (clips clustered at
+   5–6 s). This reads as flat; uniform shot duration is atypical of the form.
+2. **`trailer_v2.mp4`** — conventional trailer pacing: an accelerating cut rhythm (long
+   establishing holds → tightening through the rising action → a pre-climax montage burst →
+   sustained holds on the climax and reversal), per-shot in-point selection so each clip's
+   payoff moment falls within its window, and a re-synced score.
+3. **`trailer_v3.mp4`** — revised audio for dynamic impact. v2 applied loudness
+   normalization (`loudnorm`), which compressed the score to ~1 dB of contrast between its
+   quiet and loud passages and blunted the chorus drop. v3 instead **peak-normalizes** (a
+   single static gain, preserving the source dynamics) and adds a brief, smooth amplitude
+   **dip immediately before the drop**, yielding a pronounced quiet-to-loud transition on the
+   stage reveal.
+4. **`trailer_v4.mp4`** — smoothed score edit. v3 assembled the audio from three short song
+   segments joined by hard cuts, producing audible discontinuities. v4 instead uses a single
+   continuous passage of the track for the body — which builds into the song's *own* drop on
+   the S14 reveal — with one crossfaded transition into the quiet outro, placed on the embrace
+   where the change is musically motivated. Dynamics are preserved via peak-normalization.
+
+Measured contrast (mean level) illustrates the dynamics effect (carried into v4):
+
+| Passage | v2 (loudnorm) | v3 (preserved + pre-drop dip) |
+|---------|--------------:|------------------------------:|
+| intro | −16.9 dB | −23.6 dB |
+| pre-drop dip | — | −34.4 dB |
+| chorus drop | −15.9 dB | −15.0 dB (peak −1.3 dB) |
+
+v3 produces an ~19 dB swing from the pre-drop dip into the chorus, versus ~1 dB in v2.
+
+🎬 **Trailer (recommended):** [`build/trailer_v4.mp4`](build/trailer_v4.mp4) — ~1:08, 1280×720.
+🎬 Prior iterations: [`trailer_v3.mp4`](build/trailer_v3.mp4) (dynamics; jarring splices) · [`trailer_v2.mp4`](build/trailer_v2.mp4) (pacing) · [`trailer_v1.mp4`](build/trailer_v1.mp4) (initial, ~2:02).
 
 ### 2.6 Storybook
 
